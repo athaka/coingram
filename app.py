@@ -11,7 +11,8 @@ from flask import Flask, request, render_template, send_file, redirect, url_for
 app = Flask(__name__)
 
 # Twitter API authentication
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAL6tzwEAAAAAVJiuyyZ%2BMkCQU9XWg%2Bfl6rq7wX8%3D0R2Z99oO3d7w9CCEkl6eUXa2XggmyVO3Of73luvIFqLcCq0FfB"  # Replace with your token
+import os
+bearer_token = os.getenv("TWITTER_BEARER_TOKEN")  # Secure Token privacy using env variable
 client = tweepy.Client(bearer_token=bearer_token)
 
 # Fetch the list of cryptocurrencies from CoinGecko
