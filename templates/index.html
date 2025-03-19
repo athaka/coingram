@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Tweet Analyzer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-container { max-width: 400px; }
+        input { margin: 10px 0; padding: 5px; width: 100%; }
+        button { padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Crypto Tweet Analyzer</h1>
+        <p>Enter a Twitter username and days (max 7) to analyze crypto mentions.</p>
+        <form method="POST">
+            <input type="text" name="influencer" placeholder="Influencer (e.g., VitalikButerin)" required>
+            <input type="number" name="days" placeholder="Days (1-7)" min="1" max="7" required>
+            <button type="submit">Analyze</button>
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
