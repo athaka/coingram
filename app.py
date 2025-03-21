@@ -56,7 +56,7 @@ def fetch_price_data(coin_ids):
         filtered_coins = [
             coin for coin in response.json()
             if 'market_cap' in coin and coin['market_cap'] is not None
-            and 2000000 <= coin['market_cap'] <= 2000000000
+            and 2000000 <= coin['market_cap'] <= 20000000000
         ]
         coin_info = {}
         for coin in filtered_coins:
