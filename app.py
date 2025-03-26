@@ -166,7 +166,8 @@ def analyze_influencer(influencer, days):
 
     if data:
         df = pd.DataFrame(data)
-        filename = f"{influencer}_crypto_performance_{days}days.csv"
+        # Adjustment: Save CSV to /tmp for Render compatibility
+        filename = f"/tmp/{influencer}_crypto_performance_{days}days.csv"
         df.to_csv(filename, index=False)
         return None, filename
     return "No data found.", None
@@ -194,5 +195,7 @@ def download(filename):
 
 if __name__ == '__main__':
     print("Starting Flask app...")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # *** Adjustment: Use dynamic port for Render and disable debug ***
+    port = int(os.environ.get('PORT', 5000))  # Use Render's PORT or default to 5000
+    app.run(host='0.0.0.0', port=port, debug=False)
 
