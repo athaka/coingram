@@ -166,8 +166,8 @@ def analyze_influencer(influencer, days):
 
     if data:
         df = pd.DataFrame(data)
-        # Adjustment: Save CSV to /tmp for Render compatibility
-        filename = f"/tmp/{influencer}_crypto_performance_{days}days.csv"
+        # Adjustment: Save CSV to /tmp for Render compatibility ** Reversed it due to path error **
+        filename = f"{influencer}_crypto_performance_{days}days.csv"
         df.to_csv(filename, index=False)
         return None, filename
     return "No data found.", None
