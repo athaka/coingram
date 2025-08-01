@@ -29,7 +29,7 @@ This tool is designed for non-technical users, providing a simple front-end to e
 
 ## Setup
 
-1. **Clone the Repository** (if hosted on Git):
+1. **Clone the Repository**:
    ```bash
    git clone <repository-url>
    cd crypto-tweet-analyzer
@@ -81,4 +81,3 @@ Feel free to fork this project, submit issues, or send pull requests to enhance 
 
 ## License
 This project is open-source under the MIT License.
-
