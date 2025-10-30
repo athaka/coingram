@@ -31,8 +31,7 @@ This tool is designed for non-technical users, providing a simple front-end to e
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   ```bash
+   git clone https://github.com/athaka/coingram.git
    cd crypto-tweet-analyzer
 
 2. **Install Dependencies:**
